@@ -1,3 +1,18 @@
 .card {
-  border: 1px solid $cm-lblue;
+  background-color: $cm-lgrey;
+  border: 2px solid $cm-mgrey;
+  border-radius: 2px;
+
+    h2{
+      font-weight: lighter;
+      font-size: $card-title-font-size;
+      border-bottom: 2px solid $cm-mgrey;
+      padding: 15px;
+      margin: 0
+    }
+
+}
+
+.card-content {
+  padding: 15px;
 }
