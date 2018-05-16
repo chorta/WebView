@@ -1,12 +1,14 @@
 <html>
 <head><title>Card</title>
+    <!--build:css css/base.min.css-->
+    <link rel="stylesheet" href="css/base.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="scripts/handlebars-v4.0.11.js"></script>
 </head>
 
 <body>
     <script id="card-template" type="text/x-handlebars-template">
-        <div style="border:1px solid">
+        <div>
         <div>{{title}}</div>
         <div>{{message}}</div>
         </div>
@@ -14,7 +16,7 @@
 
 
 
-    <div id="card"></div>
+    <div class="card"></div>
 
 
 
@@ -23,7 +25,7 @@
         var template = Handlebars.compile(source);
         var data = {title: "Class Update", message: "Math 101 is canceled today.", priority:"high"};
 
-        $("#card").html(template(data));
+        $(".card").html(template(data));
     </script>
 </body>
 </html>

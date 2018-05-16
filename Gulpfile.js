@@ -34,7 +34,7 @@ gulp.task('browserSync', function() {
 });
 
 gulp.task('sass', function() {
-  return gulp.src('app/styles/*.scss') // Gets all files ending with .scss in app/scss and children dirs
+  return gulp.src('app/stylesheets/*.scss') // Gets all files ending with .scss in app/scss and children dirs
     .pipe(sass().on('error', sass.logError)) // Passes it through a gulp-sass, log errors to console
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(sass())
@@ -123,7 +123,7 @@ gulp.task('default', function(callback) {
 // Live Development with BrowserSync
 gulp.task('dev', ['browserSync', 'sass'], function() {
     // Reloads the browser whenever CSS, HTML or JS files change
-    gulp.watch('app/styles/**/*.scss', ['sass']);
+    gulp.watch('app/stylesheets/**/*.scss', ['sass']);
     gulp.watch("app/*.html").on('change', browserSync.reload);
     gulp.watch('app/*.html', browserSync.reload);
     gulp.watch('scripts/**/*.js', browserSync.reload);
